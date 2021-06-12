@@ -8,7 +8,7 @@ body {
 }
 
 .container {
-  background-color: #b7e0bf;
+  background-color: rgb(182, 224, 190);
   display: grid;
 }
 
@@ -21,7 +21,7 @@ code {
     monospace;
 }
 .pokecard {
-  background-color: rgb(246, 251, 255);
+  background-color: rgb(212, 227, 240);
   width: 35ch;
 
   place-items: center;
