@@ -1,7 +1,7 @@
 import React from "react";
 
 function PokemonList() {
-  return <div>ewe</div>;
+  return <div>NOC</div>;
 }
 
 export default PokemonList;
