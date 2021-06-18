@@ -3,7 +3,9 @@ import PokemonList from "./modules/PokemonList";
 function App() {
   return (
     <Router>
-      <PokemonList />
+      <Route to="/">
+        <PokemonList />
+      </Route>
     </Router>
   );
 }
