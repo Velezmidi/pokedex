@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useFetch } from "../customHooks/useFetch";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import PokemonPage from "./PokemonPage";
 
 function PokemonList() {
   const [currentUrl, setCurrentUrl] = useState(
@@ -35,7 +37,9 @@ function PokemonList() {
           const { name, url } = element;
           return (
             <div key={name}>
-              <h2>{name}</h2>
+              <Link to={{ pathname: name, state: { url } }}>
+                <h2>{name}</h2>
+              </Link>
             </div>
           );
         })}
