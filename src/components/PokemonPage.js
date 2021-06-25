@@ -1,30 +1,15 @@
 import React, { useEffect, useState } from "react";
 import { useFetch } from "../customHooks/useFetch";
 import ErrorPage from "./ErrorPage";
-import { BrowserRouter as useLocation } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 function PokemonPage() {
-  try {
-    const location = useLocation();
-    const { url } = location.state;
+  const { handle } = useParams();
+  const pokemonUrl = `https://pokeapi.co/api/v2/pokemon/${handle}`;
+  const { isLoading, data } = useFetch(pokemonUrl);
+  console.log(data);
 
-    if (url) {
-      return (
-        <div>
-          Poke page, pika pika modafoca
-          {url}
-        </div>
-      );
-    } else {
-      return <div>No match</div>;
-    }
-  } catch {
-    return (
-      <div>
-        <ErrorPage />
-      </div>
-    );
-  }
+  return <div>Wololo {handle}</div>;
 }
 
 export default PokemonPage;

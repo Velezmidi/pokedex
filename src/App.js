@@ -9,7 +9,9 @@ function App() {
         <Route exact path="/">
           <PokemonList />
         </Route>
-        <Route exact path="/:id" children={<PokemonPage />}></Route>
+        <Route path="/:handle">
+          <PokemonPage />
+        </Route>
         <Route path="*">
           <ErrorPage></ErrorPage>
         </Route>

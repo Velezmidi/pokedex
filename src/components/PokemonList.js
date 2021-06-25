@@ -37,7 +37,7 @@ function PokemonList() {
           const { name, url } = element;
           return (
             <div key={name}>
-              <Link to={{ pathname: name, state: { url } }}>
+              <Link to={name}>
                 <h2>{name}</h2>
               </Link>
             </div>
