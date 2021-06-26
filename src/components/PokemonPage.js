@@ -15,7 +15,7 @@ function PokemonPage() {
   if (!isError) {
     return (
       <div>
-        Wololo {handle} {id}
+        Display name from Handle: {handle} Display id from fetched data: {id}
       </div>
     );
   } else {
