@@ -16,6 +16,7 @@ export const useFetch = (url) => {
       setIsError(true);
     }
   };
+
   useEffect(() => {
     getData();
   }, [url]);
