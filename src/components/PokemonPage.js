@@ -9,13 +9,15 @@ function PokemonPage() {
   const pokemonUrl = `https://pokeapi.co/api/v2/pokemon/${handle}`;
   const { isLoading, data, isError } = useFetch(pokemonUrl);
   // console.log(data);
-  const { id } = data;
-  console.log(id);
+  const { id, name } = data;
+  console.log(data);
 
   if (!isError) {
     return (
       <div>
-        Display name from Handle: {handle} Display id from fetched data: {id}
+        <div>Display name from Handle: {handle}</div>
+        <div>Display name from fetched data: {name}</div>
+        <div>Display id from fetched data: {id}</div>
       </div>
     );
   } else {
