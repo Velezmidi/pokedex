@@ -14,8 +14,8 @@ function PokemonPage() {
 
   if (!isError) {
     return (
-      <div>
-        <div>Display name from Handle: {handle}</div>
+      <div className="data-comtainer">
+        <div className="handle-text">Display name from Handle: {handle}</div>
         <div>Display name from fetched data: {name}</div>
         <div>Display id from fetched data: {id}</div>
         <div>Display base exp: {base_experience}</div>
